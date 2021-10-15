@@ -1,0 +1,4 @@
+@import url(/1006/CSS/stytle.css);
+@import url(/1006/CSS/other.css);
+/*這裡直接路徑尋找另外兩個CSS檔案，並一次匯入Html
+簡單來說就是兩個貨物"B""B"把它組裝成一個"A"再讓A直接被店家買走*/

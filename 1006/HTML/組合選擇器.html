@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 5px solid
+                /* 框框 */
+                rgb(0, 0, 0);
+        }
+
+        /* 在<body>的地方可以用<p class="自定義">來當作群組名稱>     (p是可以更改成其他的)
+       而當想讓群組同時改變可以在<style>區域 前面用.p{}ID前面用#p{}這樣群組就會一起變化 
+        若是想將兩個群組同時套用某個項目可以*/
+        .div,
+        .giv {
+            border: 10px solid pink
+        }
+
+        /*這邊的.div跟div不一樣一個是自己定義過的一個是系統本身定義的*/
+        /*如果想把.giv跟.div同時改變就可以寫成.div,.giv*/
+        div>p {
+            color: rgb(255, 0, 0)
+        }
+
+        /*div>p(意思就是更改div裡面出現的下一"層"p
+        若是中間被其他< >包覆的p就不會改變*/
+        div p {
+            color: rgb(255, 0, 212)
+        }
+
+        /*這部分div p(意思是div裡全部的p一起更改(不會更改到nav但在nav裡面p的會更改))*/
+        div+p {
+            color: brown
+        }
+
+        /*div+p是div外面的下一個p才會影響(但div自身跟在div裡面的p是不會影響到)*/
+        div~p {
+            color: blue
+        }
+
+        /*div~p是第一個div之後的p全都改變
+    但是不包刮被其他< >包住的p且
+    只有前排有< >若是前面有</ >則暫且中斷
+    但遇到新的一段<p>則不再受影響
+    */
+    </style>
+</head>
+
+<body>
+    <!-- div無語意 tag換新一行block -->
+
+    <p class=div>11111111111111</p>
+    <p class=giv>2222222222222</p>
+    <div>33333333
+        <p>4444444444</p>
+        <p>55555555</p>
+        <p>66666666</p>
+
+        <p>E8888888</p>
+        
+    </div>
+    <p>99999999</p>
+    <p>00000000000</p>
+    <div>AAAAAAAA</div>
+    <p>BBBB
+    <div>IIIII</div>BBBBBB</p>
+    <nav>CCCC<p>DDDDDDDDD</p>CCCCCC</nav>
+    <p>EE
+    <p>GGG
+    <p>HHH</p>GGGG</p>EEEEEEEEE</p>
+    <p>FFFFFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FFFFFFFFF</p>
+
+
+
+
+</body>
+
+</html>
