@@ -22,7 +22,7 @@ git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 在github的文件超連結上面按.(ㄡ>)可以進入雲端編輯模式，可以在雲端上面文件編輯
 
 
-
+hahaha
 
 
 
