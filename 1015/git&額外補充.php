@@ -20,7 +20,6 @@ git push forst master ->將更改後的檔案上傳到github，記得先git add&
 git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 (forst是你檔案名稱,master是你的分支名稱,兩者皆是會變動的)
 在github的文件超連結上面按.(ㄡ>)可以進入雲端編輯模式，可以在雲端上面文件編輯
-主檔案測試用
 
 
 
