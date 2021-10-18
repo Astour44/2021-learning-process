@@ -24,11 +24,7 @@ git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 中斷下載用ctrl+C
 
 
-
-
-
-
-
+hahaha
 
 hahaha
 
