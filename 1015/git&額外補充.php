@@ -15,8 +15,20 @@
 ($ git checkout 檔案名稱)->可以切換支線到檔案名稱的位置(跟編碼不一樣是切換支線編碼是單點)
 
 1018新增
-git remote add origin https://github.com/Astour44/php-test.git
-git push origin(origin可以自行替換名稱)
+git remote add origin https://github.com/Astour44/php-test.git(origin可以自行替換名稱)
+git push origin ->將更改後的檔案上傳到github，記得先git add&commit
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

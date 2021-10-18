@@ -134,8 +134,28 @@
     }
 
 
+for($i=3;$i<100;$i=$i+1){
+    $test=false;/* >(質數) */
+for($j=2;$j<$i;$j++){
+    if($i%$j==0){
+    $test=true;/* 質數 */
+    }
+}
+if($test==false){
+echo $i.",";}}
+
   
         
+
+
+
+
+
+
+
+
+
+
 
 
 
