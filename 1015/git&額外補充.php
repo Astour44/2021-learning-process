@@ -24,13 +24,6 @@ git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 中斷下載用ctrl+C
 
 
-hahaha
-
-hahaha
-
-
-
-
 回家將git載好後對資料夾做Bash後init
 記得下載gitlens外掛
 
@@ -40,7 +33,7 @@ hahaha
 編碼不可還原且無規則(因為沒有規則所以他無法還原)
 
 
-
+test
 
 
 */
