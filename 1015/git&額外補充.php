@@ -14,6 +14,12 @@
 ($ git branch)->查詢所有目前有的檔案分支(branch類似主線所延伸的所有分支都可以管理到)
 ($ git checkout 檔案名稱)->可以切換支線到檔案名稱的位置(跟編碼不一樣是切換支線編碼是單點)
 
+1018新增
+git remote add origin https://github.com/Astour44/php-test.git
+git push origin(origin可以自行替換名稱)
+
+
+
 回家將git載好後對資料夾做Bash後init
 記得下載gitlens外掛
 
