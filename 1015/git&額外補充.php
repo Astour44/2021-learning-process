@@ -17,7 +17,8 @@
 1018新增
 git remote add origin https://github.com/Astour44/php-test.git(origin可以自行替換名稱)
 git push origin ->將更改後的檔案上傳到github，記得先git add&commit
-
+git pull forst master->將遠端(github)編輯的檔案變更到本地文件
+(forst是你檔案名稱,master是你的分支名稱,兩者皆是會變動的)
 
 
 
