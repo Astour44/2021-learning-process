@@ -88,6 +88,14 @@ for($i=0;$i<4;$i++)
 
 
 
+<<<<<<< HEAD
+=======
+        
+/* RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+
+/* 要開始改分支囉 */
+
+>>>>>>> ce0a16d3de64ee68cb9aca4d6f7ec6b0902b009a
 
 
 
