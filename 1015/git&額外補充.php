@@ -20,6 +20,16 @@ git push forst master ->將更改後的檔案上傳到github，記得先git add&
 git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 (forst是你檔案名稱,master是你的分支名稱,兩者皆是會變動的)
 在github的文件超連結上面按.(ㄡ>)可以進入雲端編輯模式，可以在雲端上面文件編輯
+(git bash here)輸入->git clone 網址->這樣就可以直接下載網路的專案下來
+中斷下載用ctrl+C
+1018晚上新增
+(git remote -v)->確認節點名稱跟節點是否存在(origin  https://github.com/Astour44/forst.git 這條就是origin是節點名稱)
+今天遇到的狀況就是節點名稱一直不符合，因為clone下來的檔案本身就會是origin，而我卻一直輸入forest(以為是要輸入遠端github上面的儲存點名稱)
+所以從頭來過的順序就是一開始打開Vscode跟github並登入，輸入帳號跟使用者名稱
+$ git config --global user.name "Astour44"
+$ git config --global user.email astour44@gmail.com
+之後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
+之後pull檔案下來並彈出認證視窗
 
 
 
@@ -29,13 +39,6 @@ git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 
 
 
-
-
-
-
-
-回家將git載好後對資料夾做Bash後init
-記得下載gitlens外掛
 
 上課的額外補充:
 密碼跟編碼差別在
