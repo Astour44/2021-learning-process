@@ -1,0 +1,35 @@
+1.display:flex->宣告
+2.flex-direction->定義主軸
+(row: 元素擺放的方向和文字方向一致
+row-reverse: 元素擺放的方向和文字的方向相反
+column: 元素從上放到下
+column-reverse: 元素從下放到上)
+3.justify-content->定義主軸位置
+(flex-start:對齊左側
+flex-end:對齊右側
+center:對齊中間
+space-between: 物件等距
+space-around:元素周圍保持相等的距離)
+4.align-items->定義次軸
+align-content->來決定行與行之間隔多遠,只有一行的時候align-content沒有任何效果
+(flex-start: 多行都集中在頂部
+flex-end: 多行都集中在底部
+center: 多行居中
+space-between: 行與行之間保持相等距離
+space-around: 每行的周圍保持相等距離
+stretch: 每一行都被拉伸以填滿容器)
+5.order->解決排序問題->1=(將物件往後1格),-1=(將物件往前一格)
+{只有相同物件才算再一起}
+6.flex-wrap->換行
+(nowrap: 所有的元素都在一行
+wrap: 元素自動換成多行
+wrap-reverse: 元素自動換成逆序的多行)
+7.flex-direction+flex-wrap=可以寫成:flex-flow->
+全部寫法就是flex-flow:column warp.
+
+
+
+
+
+alt+shift=可以一次全部改寫
+home鍵可以直接往最前面跳 end可以往尾跳
