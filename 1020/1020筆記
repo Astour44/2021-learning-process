@@ -1,17 +1,21 @@
 1.display:flex->宣告
+
 2.flex-direction->定義主軸
 (row: 元素擺放的方向和文字方向一致
 row-reverse: 元素擺放的方向和文字的方向相反
 column: 元素從上放到下
 column-reverse: 元素從下放到上)
+
 3.justify-content->定義主軸位置
 (flex-start:對齊左側
 flex-end:對齊右側
 center:對齊中間
 space-between: 物件等距
 space-around:元素周圍保持相等的距離)
+
 4.align-items->定義次軸
 align-content->來決定行與行之間隔多遠,只有一行的時候align-content沒有任何效果
+align-self->單獨控制
 (flex-start: 多行都集中在頂部
 flex-end: 多行都集中在底部
 center: 多行居中

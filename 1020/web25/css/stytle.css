@@ -12,7 +12,7 @@ overflow:hidden內容超出的話不顯示
 */
 
 .main {
-    background-color: rgb(86, 187, 128);
+    background-color: rgb(255, 255, 255);
     display: flex;
     width: 1024px;
     padding: 0 12px;
@@ -32,6 +32,7 @@ body>*:not(aside, section), aside>*, section>* {
     border: 1px solid rgb(118, 255, 255);
 }
 .top {
+    background-color:rgb(255, 248, 182);
     flex-basis: 1000px;
     height: 65px;
     
@@ -39,17 +40,17 @@ body>*:not(aside, section), aside>*, section>* {
 /*flex-basis是寬度
 flex-direction是高度*/
 .aside {
-
-
-    
     flex-basis: 215px;
     height: calc(768px - 65px - 20px);
     display: flex;
     flex-direction: column;
-    border:5px solid red;
+    /* border:5px solid red; */
 }
+
 /*flex-basis 優先度比width高 
 flex-direction 優先度比height高
+row=橫著長
+column直的長
 */ 
 
 
@@ -59,16 +60,46 @@ flex-direction 優先度比height高
     /*對於元件basis主軸長度*/
     flex-basis: calc(100% - 25px);
     height: 65px;
-    border:5px solid yellowgreen;
+    /* border:5px solid yellowgreen; */
     
 }
+.aside-menu-header{
 
+color: #FF00FF;
+font-size: 24px;
+text-decoration:underline solid black ;
+text-align: center;
+font-weight: 500;
+margin:10px ;
+
+}
+    
+
+.aside>nav>a{
+font-size:16px;
+color:#000000;
+background: url(/1020/web25/17300-104301/menu1.png);
+display: inline-block;
+width:200px;
+height:35px;
+line-height: 35px;}
+
+.sub:hover.link{
+
+background: url(/1020/web25/17300-104301/menu2.png);
+color: blue;
+}
+
+
+
+
+a{align-self:center}
 /* aside .menu*/
 
 .updata {
     /*對於元件basis主軸長度*/
     flex-basis: 25px;
-    border:5px solid yellow;
+    /* border:5px solid yellow; */
 }
 
 /*section*/
@@ -80,6 +111,9 @@ flex-direction 優先度比height高
 }
 
 .marquee {
+    font-size:24px;
+    color: #0000FF;
+
     flex-basis: 29px;
     padding: 0 calc((100% - 770px - 2px) /2);
     
