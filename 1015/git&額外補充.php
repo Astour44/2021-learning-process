@@ -30,6 +30,7 @@ $ git config --global user.name "Astour44"
 $ git config --global user.email astour44@gmail.com
 之後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
 之後pull檔案下來並彈出認證視窗
+git remote remove 節點名稱->刪除節點
 
 
 
