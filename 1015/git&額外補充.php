@@ -25,12 +25,18 @@ git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 1018晚上新增
 (git remote -v)->確認節點名稱跟節點是否存在(origin  https://github.com/Astour44/forst.git 這條就是origin是節點名稱)
 今天遇到的狀況就是節點名稱一直不符合，因為clone下來的檔案本身就會是origin，而我卻一直輸入forest(以為是要輸入遠端github上面的儲存點名稱)
-所以從頭來過的順序就是一開始打開Vscode跟github並登入，輸入帳號跟使用者名稱
+所以從頭來過的順序就是一開始新建一個資料夾用Vscode打開跟github並登入，輸入帳號跟使用者名稱
 $ git config --global user.name "Astour44"
 $ git config --global user.email astour44@gmail.com
+<<<<<<< HEAD
 之後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
 之後pull檔案下來並彈出認證視窗
 git remote remove 節點名稱->刪除節點
+=======
+之後用git init初始化
+然後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
+再用pull檔案下來並彈出認證視窗
+>>>>>>> 9a2b3254c416df38cb30d28a422e9ab7a34bddc6
 
 
 
