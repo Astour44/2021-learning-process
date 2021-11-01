@@ -32,10 +32,15 @@ $ git config --global user.email astour44@gmail.com
 之後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
 之後pull檔案下來並彈出認證視窗
 git remote remove 節點名稱->刪除節點
+
 =======
 之後用git init初始化
 然後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
 再用pull檔案下來並彈出認證視窗
+
+git branch reset(reset是回到版本前)
+$ git reset e12d8ef^(^是回到前一次)
+git branch reset Head(Head是版本的頭)
 >>>>>>> 9a2b3254c416df38cb30d28a422e9ab7a34bddc6
 
 
