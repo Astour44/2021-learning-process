@@ -28,20 +28,22 @@ git pull forst master->將遠端(github)編輯的檔案變更到本地文件
 所以從頭來過的順序就是一開始新建一個資料夾用Vscode打開跟github並登入，輸入帳號跟使用者名稱
 $ git config --global user.name "Astour44"
 $ git config --global user.email astour44@gmail.com
-<<<<<<< HEAD
 之後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
 之後pull檔案下來並彈出認證視窗
 git remote remove 節點名稱->刪除節點
 
-=======
 之後用git init初始化
 然後輸入git remote add 節點名稱 https://github.com/Astour44/php-test.git
 再用pull檔案下來並彈出認證視窗
 
 git branch reset(reset是回到版本前)
 $ git reset e12d8ef^(^是回到前一次)
-git branch reset Head(Head是版本的頭)
->>>>>>> 9a2b3254c416df38cb30d28a422e9ab7a34bddc6
+git branch reset Head(Head是版本的頭)                 
+
+分支跟分支的比較可以從
+版本管理->底下的search&compare->選擇你要的分支
+git marge forst (合併分支 要先選到自己要留著的分支)
+
 
 
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 1024px;
+            height: 900px;
+            margin: auto;
+            ;
+        }
+
+        body>* {
+            border: 2px solid brown;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            border: 1px;
+            width: 80%;
+            text-align: center;
+        }
+
+        th {
+            margin: auto;
+            padding-left: 80px;
+        }
+
+        tr,
+        td {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding-left: 80px;
+        }
+
+        nav{ display: flex;
+            justify-content:end
+        }
+    </style>
+</head>
+
+<body>
+    <h2>starbucks</h2>
+    <form action="" id="myform">
+        <table>
+            <tr>
+                <th>品名</th>
+                <th>單價</th>
+                <th>數量</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="" value="拿鐵"></td>
+                <td><input type="text" name="" id="num4" value="100"></td>
+                <td><input type="number" name="" id="num1" value=""></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="" value="抹茶"></td>
+                <td><input type="text" name="" id="num5" value="120"></td>
+                <td><input type="number" name="" id="num2" value=""></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="" value="奶茶"></td>
+                <td><input type="text" name="" id="num6" value="130"></td>
+                <td><input type="number" name="" id="num3" value=""></td>
+            </tr>
+
+        </table>
+        <nav><input type="submit" value="送出" id="result"></nav>
+        <p id="presult">總金額為:</p>
+    </form>
+    <script src="./飲料販賣機.js"></script>
+</body>
+
+</html>
