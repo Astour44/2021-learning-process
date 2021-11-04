@@ -12,7 +12,7 @@ b=2000;
 c=500;
 console.log("a > b "+(a>b));
 console.log("a > c"+(a>c));
-console.log("a>b && a>c"+ (( a > b ) || ( a > c ) ));
+console.log("a > b && a > c"+ (( a > b ) || ( a > c ) ));
 
 
 // const num1 = 10;
