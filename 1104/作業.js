@@ -1,8 +1,11 @@
-// for(let i=1;i<10;i++){
-//     for(let a=1;a<10;a++){
-//         console.logA(i*a)
-//     }
-// }
+
+document.getElementById("demo").innerHTML="段落已修改。";
+
+for(let i=1;i<10;i++){
+    for(let a=1;a<10;a++){
+        console.log (i*a)
+    }
+}
 
 // const form = document.getElementById("myform")
 // const num1 = document.getElementById("num1")
