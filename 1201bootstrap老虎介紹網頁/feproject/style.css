@@ -1,0 +1,35 @@
+body {
+    background-color: wheat;
+    font-family: 'font-family: Microsoft JhengHei;';
+    color: darkblue;
+}
+
+.first_div {
+    border: 5px solid lightgoldenrodyellow;
+    width: 300px;
+    height: 260px;
+    margin-top: 10px;
+}
+.first_div:hover{
+    box-shadow: 5px 5px 5px 5px black;
+    transition-timing-function: linear;
+    transition: all 1s;
+}
+.end_div{
+    display: flex;
+    justify-content: space-between;
+}
+.divmain{
+    width: 100%;
+    height: 500px;
+}
+.div_coin{font-size: 50px;
+color: darkslateblue;}
+   
+.div_coin:hover{
+    transition-timing-function: linear;
+    transition: all 1s;
+    color: palevioletred;
+    
+    font-size: 100px;
+}
