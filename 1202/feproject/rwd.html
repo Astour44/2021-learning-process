@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-8">
+        <p class="d-flex justify-content-center">
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            <i class="fas fa-address-card"> U s e r &nbsp; N a m e</i>
+          </a>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            <i class="fas fa-anchor"></i>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body fab fa-apple 7x">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatibus doloremque ab minima
+              facilis minus, debitis voluptate iure, dicta odio cupiditate culpa et modi quasi perferendis quia atque
+              sapiente nihil!</p>
+          </div>
+        </div>
+        <hr>
+        <p class="d-flex bd-highlight mb-3">
+          <a class="btn btn-primary p-2 bd-highlight" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">return left coin</a>
+          <button class="btn btn-primary p-2 bd-highlight" type="button" data-toggle="collapse"
+            data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">return
+            right coin</button>
+          <button class="btn btn-primary ml-auto p-2 bd-highlight" type="button" data-toggle="collapse"
+            data-target=".multi-collapse" aria-expanded="false"
+            aria-controls="multiCollapseExample1 multiCollapseExample2">both return</button>
+        </p>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card card-body">
+                <i class="fas fa-ambulance 9x"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                Some placeholder content for the second collapse component of this multi-collapse example. This panel is
+                hidden by default but revealed when the user activates the relevant trigger.
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <i class="fas fa-cat d-flex justify-content-center">
+                    <p>Cute Tiger</p>
+                  </i>
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body d-flex justify-content-center">
+                <iframe width="100%" height="455" src="https://www.youtube.com/embed/zWz9tmb5sy4"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <div class="col-2">老虎野放</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Collapsible Group Item #2
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.48687034727!2d121.13181961542928!3d23.55095130228216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f308288815fef%3A0x55256432baf060cf!2z5ZiG5oGv54Gj!5e0!3m2!1szh-TW!2stw!4v1638421874933!5m2!1szh-TW!2stw"
+                  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Collapsible Group Item #3
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="container">
+                  <h2>Hoverable Dark Table</h2>
+                  <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>
+                  <table class="table table-dark table-hover div_table">
+                    <thead>
+                      <tr>
+                        <th><i class="fas fa-clock"></i>Time</th>
+                        <th><i class="fas fa-yen-sign"></i>Dollars</th>
+                        <th><i class="fas fa-mail-bulk"></i>Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Monday</td>
+                        <td>1500$</td>
+                        <td><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.48687034727!2d121.13181961542928!3d23.55095130228216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f308288815fef%3A0x55256432baf060cf!2z5ZiG5oGv54Gj!5e0!3m2!1szh-TW!2stw!4v1638421874933!5m2!1szh-TW!2stw"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Firday</td>
+                        <td>1800$</td>
+                        <td><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.48687034727!2d121.13181961542928!3d23.55095130228216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f308288815fef%3A0x55256432baf060cf!2z5ZiG5oGv54Gj!5e0!3m2!1szh-TW!2stw!4v1638421874933!5m2!1szh-TW!2stw"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Sunday</td>
+                        <td>1200$</td>
+                        <td><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.48687034727!2d121.13181961542928!3d23.55095130228216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f308288815fef%3A0x55256432baf060cf!2z5ZiG5oGv54Gj!5e0!3m2!1szh-TW!2stw!4v1638421874933!5m2!1szh-TW!2stw"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nav_div">
+  <div id="image4">
+  <div>
+    <div id="image" class="gbox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quas vitae suscipit repellat
+      illum porro consequatur reprehenderit modi facere repellendus illo, recusandae soluta adipisci perferendis
+      voluptatem omnis maiores officiis dolorem!</div>
+  </div>
+  <div>
+    <div id="image1" class="gbox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quas vitae suscipit repellat
+      illum porro consequatur reprehenderit modi facere repellendus illo, recusandae soluta adipisci perferendis
+      voluptatem omnis maiores officiis dolorem!</div>
+  </div>
+  <div>
+    <div id="image2" class="gbox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quas vitae suscipit repellat
+      illum porro consequatur reprehenderit modi facere repellendus illo, recusandae soluta adipisci perferendis
+      voluptatem omnis maiores officiis dolorem!</div>
+  </div>
+</div>
+</nav>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+  integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+</html>

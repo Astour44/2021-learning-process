@@ -1,35 +1,72 @@
 body {
     background-color: wheat;
     font-family: 'font-family: Microsoft JhengHei;';
-    color: darkblue;
+    font-weight:bolder;
+    color: darkred;
 }
 
 .first_div {
     border: 5px solid lightgoldenrodyellow;
     width: 300px;
-    height: 260px;
-    margin-top: 10px;
-}
-.first_div:hover{
-    box-shadow: 5px 5px 5px 5px black;
+    height: 280px;
+    margin-top: 15px;
     transition-timing-function: linear;
-    transition: all 1s;
+    transition: 1s;
 }
-.end_div{
+
+.first_div:hover {
+    box-shadow: 5px 5px 5px 5px grey;
+    height: 270px;
+}
+
+.end_div {
+    width: auto;
+    height: 600px;
     display: flex;
     justify-content: space-between;
 }
-.divmain{
+
+.divmain {
     width: 100%;
     height: 500px;
 }
-.div_coin{font-size: 50px;
-color: darkslateblue;}
-   
-.div_coin:hover{
+
+.div_coin {
+    font-size: 50px;
+    color: darkslateblue;
     transition-timing-function: linear;
     transition: all 1s;
+}
+
+.div_coin:hover {
+
     color: palevioletred;
-    
     font-size: 100px;
+}
+
+
+.li_first {
+    width: 250px;
+    display: inline-block;
+    transition-timing-function: linear;
+    transition: all 1s;
+}
+
+.a_first {
+    display: flex;
+    justify-content: center;
+    transition-timing-function: linear;
+    transition: all 2s;
+    color: darkred;
+}
+
+.a_first:active {
+    background-color: white;
+}
+
+.a_first:hover {
+
+    color: white;
+    background-color: darkred;
+    border-radius: 30px;
 }
