@@ -70,3 +70,6 @@ body {
     background-color: darkred;
     border-radius: 30px;
 }
+.bg-warning {
+    background-color: #ff9900!important;
+}
