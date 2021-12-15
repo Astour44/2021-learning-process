@@ -15,9 +15,9 @@ form.addEventListener("submit", function (e) {
     console.log(num1.vaule);
     console.log(num2.vaule);
     console.log(chose.value);
-    parseIntNum1 = parseInt(num1.value);4
-    parseIntNum2 = parseInt(num2.value);5
-    parseIntNum3 = parseInt(num1.value);4
+    parseIntNum1 = parseInt(num1.value);
+    parseIntNum2 = parseInt(num2.value);
+    parseIntNum3 = parseInt(num1.value);
     console.log(typeof (chose.value));
     
     switch (chose.value) {
@@ -29,15 +29,15 @@ form.addEventListener("submit", function (e) {
                 parseIntNum2 = parseIntNum1;
                 parseIntNum1 = parseIntNum3;}
             total = (parseIntNum1 + parseIntNum2);
-            presult.innerText = total;
+            presult.innerText = "加法為" + total;
             break;
         case "-":
-            if(parseIntNum1 < parseIntNum2) {
-                parseIntNum3 = parseIntNum2;
-                parseIntNum2 = parseIntNum1;
-                parseIntNum1 = parseIntNum3;}
+            if(parseIntNum1  < parseIntNum2 ) {
+                parseIntNum3  = parseIntNum2 ;
+                parseIntNum2  = parseIntNum1 ;
+                parseIntNum1  = parseIntNum3 ;}
             total = (parseIntNum1 - parseIntNum2);
-            presult.innerText = total;
+            presult.innerText = "減法為" + total;
             break;
         case "*":
             if(parseIntNum1 < parseIntNum2) {
@@ -45,7 +45,7 @@ form.addEventListener("submit", function (e) {
                 parseIntNum2 = parseIntNum1;
                 parseIntNum1 = parseIntNum3;}
             total = (parseIntNum1 * parseIntNum2);
-            presult.innerText = total;
+            presult.innerText = "乘法為" + total;
             break;
         case "/":
             if(parseIntNum1 < parseIntNum2) {
@@ -53,12 +53,22 @@ form.addEventListener("submit", function (e) {
                 parseIntNum2 = parseIntNum1;
                 parseIntNum1 = parseIntNum3;}
             total = (parseIntNum1 / parseIntNum2);
-            presult.innerText = total;
+            presult.innerText = "除法為" + total;
             break;
         default:
             break;
     }})
+
+
+    
     // if(parseIntNum1 < parseIntNum2) {
     //     parseIntNum3 = parseIntNum2;
     //     parseIntNum2 = parseIntNum1;
     //     parseIntNum1 = parseIntNum3;}
+
+
+
+
+
+
+
