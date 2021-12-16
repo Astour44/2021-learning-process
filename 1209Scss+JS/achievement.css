@@ -1,0 +1,37 @@
+
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', 'Microsoft JhengHei;', sans-serif;
+   
+}
+.div_body {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+.divinput {
+    margin: 10px;
+}
+
+nav {
+    margin: auto;
+    margin-top: 100px;
+}
+.alert-dark{
+    color:white;
+    /* border: rgb(179, 15, 15);
+    background-color: rgb(179, 15, 15); */
+    border-color: white;
+    background-color: green;
+}
+.input-group-text{
+    background-color:darkgreen;
+    color:white;
+    border-color: white;
+}
+
+/* .alert-dark:hover{
+    background-color:wheat;
+} */

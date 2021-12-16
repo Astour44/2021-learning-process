@@ -1,0 +1,46 @@
+
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', 'Microsoft JhengHei;', sans-serif;
+   font-size: 24px;
+}
+.div_body {
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+.divinput {
+    margin: 10px;
+}
+
+nav {
+    margin: auto;
+    margin-top: 100px;
+}
+.alert-dark{
+    color:white;
+    /* border: rgb(179, 15, 15);
+    background-color: rgb(179, 15, 15); */
+    border-color: white;
+    background-color: green;
+}
+.input-group-text{
+    background-color:darkgreen;
+    color:white;
+    border-color: white;
+}
+.picture{
+border:2px solid gray;
+
+
+}
+.input-group-lg > .form-control:not(textarea), .input-group-lg > .custom-select {
+    height: auto;
+}
+i{font-size: 30px;
+color: white;}
+/* .alert-dark:hover{
+    background-color:wheat;
+} */

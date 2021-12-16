@@ -7,15 +7,15 @@
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #fffd88 !default;
+$gray-200: #585858 !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #59c4ac !default;
+$gray-400: #ffb694 !default;
 $gray-500: #91ffe3 !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black:    rgb(255, 251, 41) !default;
 
 $grays: () !default;
 $grays: map-merge(
