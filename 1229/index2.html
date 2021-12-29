@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+    <ul>
+        <h1>JQ</h1>
+        <p id="red">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, commodi dignissimos! Iste
+            explicabo veniam ducimus laborum officia ex non porro vero quasi dolores sunt maiores, itaque quas
+            perspiciatis impedit quod!</p>
+            <p id="blue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, commodi dignissimos! Iste
+                explicabo veniam ducimus laborum officia ex non porro vero quasi dolores sunt maiores, itaque quas
+                perspiciatis impedit quod!</p>
+            <button id="hideBtn">hide</button>
+            <button id="showBtn">show</button>
+            <button id="toggleBtn">toggle</button>
+    </ul>
+
+    <script>
+        // const content = document.getElementById("content");
+        // content.style.color = "red";
+
+        $(document).ready(function () {
+            // $("#content").hide();
+            //這個按鈕按下去再執行
+            $("#blue").css('color', "blue");
+            $("#red").css('color', "red")
+
+            $("#hideBtn").click(function () {
+                $("#blue").hide();
+                $("#red").hide();
+
+            });
+            $("#showBtn").click(function () {
+                $("#blue").show();
+                $("#red").show();
+
+            });
+            $("#toggleBtn").click(function () {
+                $("#blue").toggle();
+                $("#red").toggle();
+
+            });
+            $("p").click(function () {
+                $(this).hide();
+
+            });
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
