@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+
+    <p id='click'>click</p>
+    <div id="allcolor">
+        <p id='mouse'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sit.</p>
+    </div>
+    <input type="number" id="num">數量
+    <input type="hidden" id="hid" value="10">
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, qui.</p>
+    </div>
+
+
+
+
+
+    <button type="submit" id="p1">按鍵換黃色背景</button>
+
+
+    <button type="submit" id="p2">按鍵換將新增的文字上色</button>
+    <button type="submit" id="p3">prepend</button>
+    <button type="submit" id="p4">prependremove</button>
+    <button type="submit" id="p5">after+before</button>
+
+
+
+
+
+
+    <script>
+        $('#click').one('click', function () {
+            $(this).css('color', 'red')
+        })
+        $('#p1').on('click', function () {
+            console.log('aa')
+            $('#click').css('background-color', 'yellow')
+        })
+
+
+
+
+        $('#mouse').on({
+            dblclick: function () {
+                $('#mouse').after(`<p id='mouse'>dbclick+after</p>`)
+            },
+            mouseenter: function () {
+                console.log('enter')
+                $(this).css('background-color', 'red')
+
+            },
+            mouseout: function () {
+                console.log('out')
+                $(this).css('background-color', 'gray')
+
+            }
+
+        })
+        $('#p2').on('click', function () {
+            console.log('g')
+            $('#mouse').siblings().filter('p').css('background-color', 'pink')
+        })
+        //問題:將增加的文字一樣用按鍵上色
+        //解決:siblings() filter('p')直接選擇這層的所有'p'
+        $('#num').on('blur', function () {
+            num = parseInt($(this).val())
+            console.log(num)
+            hid = parseInt($('#hid').val())
+            console.log(hid)
+            total = num * hid;
+            console.log('總共為', total)
+        })
+        $('#p3').on('click', function () {
+            // $('p').last().prepend('<p>prepend</p>') //最後一個<p>裡面的最前面+prepend
+            $('div').first().prepend('<p>prepend</p>')  //最後一個<div>裡面的前面+prepend
+        })
+        $('#p4').on('click', function () {
+            $('p').last().remove()//刪除最後一個p不設定哪個就會全刪除
+        })
+        $('#p5').on('click', function () {
+            $('p').last().after('<p>after</p>')//最後一個<p>外面的最後面+after
+        })//after befor跟prepend append差別最大在一個加在標籤裡面一個加在標籤外面
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

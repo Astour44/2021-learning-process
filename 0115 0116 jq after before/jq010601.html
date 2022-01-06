@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .newclass {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <div class='newclass'>
+        <div>
+            <div>
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, perspiciatis?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, perspiciatis?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, perspiciatis?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, perspiciatis?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, perspiciatis?</p>
+
+            </div>
+            <div>
+                <ol>
+                    <p>olp</p>
+                    <p>olp
+                        <span>span</span>
+                    </p>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li class="liclass">Lorem ipsum dolor sit amet.</li>
+                    <li class="liclass">Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ol>
+                <ol>
+                    <p>olp</p>
+                    <p>olp
+                        <span>span</span>
+                    </p>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li class="liclass">Lorem ipsum dolor sit amet.</li>
+                    <li class="liclass">Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ol>
+            </div>
+
+            <button type="submit" id="hideclick">Hide</button>
+            <button type="submit" id="pchangblue">pchangblue</button>
+            <button type="submit" id="spanchangred">pchangblue</button>
+            <button type="submit" id="liclasschange">liclasschange</button>
+        </div>
+        <p>這邊不能變成藍色</p>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#hideclick').on('click', function () {
+                console.log('aa')
+                $('p').first().remove()
+            })
+            $('#pchangblue').on('click', function () {
+                console.log('blue')
+                // $('div p').css('color','blue')
+                $('div').find('p').css('color', 'blue')
+            })
+            $('#spanchangred').on('click', function () {
+                console.log('spanchangred')
+                $('div').find('ol').find('p').find('span').last().css('color', 'red')
+            })
+
+            $('#liclasschange').on('click', function () {
+                console.log('cc')
+                $('.liclass').first().css('color','pink')
+            })//這邊要改第一層所有.liclass顏色
+
+
+
+
+
+
+
+        });
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<style>
+    .newclass {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .aa {
+        color: royalblue
+    }
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <div class='newclass'>
+
+        <div>
+            <ol>
+                <button type="submit" id="first">changecolor</button>
+                <button type="submit" id="addli">add-li</button>
+                <button type="submit" id="removeli">remove-li</button>
+                <button type="submit" id="prev">prev</button>
+                <button type="submit" id="next">next</button>
+                <button type="submit" id="closest">closest</button>
+                
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li class="p4">Lorem ipsum dolor sit amet.</li>
+                <li>pink</li>
+                <li>pinkpink</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li class="p5">
+                    <nav class="firstnav">1
+                        <nav>2
+                            <p class="cos">3
+                            </p>
+                        </nav>
+                    </nav>
+                </li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ol>
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ol>
+
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#first').on('click', function () {
+                    console.log('a')
+                    $(this).siblings().filter('li').toggleClass('aa')
+                })
+                $('#addli').on('click', function () {
+                    console.log('add')
+
+                    $('ol').first().find('li').last().after('<li></li>')
+                })
+
+
+                $('#removeli').on('click', function () {
+                    console.log('remove')
+                    console.log(typeof ($(this)))//typeof($(this))查詢屬性
+                    $(this).siblings().filter('li').last().remove()
+                })
+                // $('#prev').on('click', function () {
+                //     console.log('prev')
+                //     $('.p4').prev().css('color', 'pink')//同層前面第一個
+                // })
+                $('#prev').on('click', function () {
+                    console.log('prev')
+                    $('.p4').prev().prev().css('color', 'pink')//同層前面的第二個(第一個不會有)
+                })
+                // $('#next').on('click', function () {
+                //     console.log('next')
+                //     $('.p4').next().css('color', 'pink')//同層後第一個
+                // })
+                $('#next').on('click', function () {
+                    console.log('next')
+                    $('.p4').next().next().css('color', 'pink')//同層後第二個
+                })
+                // $('#next').on('click', function () {
+                //     console.log('next')
+                //     $('.p4').nextAll().css('color', 'pink')//同層後全部
+                // })
+                $('#closest').on('click', function () {
+                    console.log('closest')
+                    $('.cos').closest('nav').css('color', 'pink')
+                    //class='cos'往上的第一個祖先closest('nav')改變成粉色
+                    //cos的往上的第一個祖先nav變粉色
+                })
+            });
+
+
+
+
+        </script>
+
+
+
+</body>
+
+</html>
