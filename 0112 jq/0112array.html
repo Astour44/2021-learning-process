@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 先載入 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <!-- 先載入 END-->
+
+    <script>
+
+        $(document).ready(function () {
+            const myArr = [{ "aa": "a" }, { "bb": "b" }];
+            console.log(myArr)
+
+
+
+
+            const nameArr = ['amy', 'bob', 'cat']
+            console.log(nameArr)
+            //抓出陣列裡面的bob 程式語言是從0開始所以amy=0，bob會是1
+            console.log(nameArr[1])
+            //增加新的array用陣列加.push()
+            nameArr.push('dog')
+
+
+
+            //陣列+數字的顯示方法{'': 0 ,}
+            //這邊的原型(Prototype)是物件(objects)而在{}裡面是不能用;做結尾的
+            const nameObj = {
+                'amy': 100,
+                'bob': 80,
+                'cat': 70,
+                'dog': 600,
+            }
+            console.log(nameObj)
+            //這邊出來是物件
+            const user1 =
+            {
+                'name': 'amy',
+                'age': 20,
+                'level': 1
+            }
+            console.log(user1)
+            //這邊出來是陣列
+            const user = [
+                {
+                    'name': 'amy',
+                    'age': 20,
+                    'level': 1
+                },
+                {
+                    'name': 'bob',
+                    'age': 30,
+                    'level': 2
+                }
+            ]
+            console.log(user)
+        });
+
+    </script>
+
+
+</body>
+
+</html>

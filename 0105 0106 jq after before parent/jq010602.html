@@ -65,7 +65,12 @@
                 <li>Lorem ipsum dolor sit amet.</li>
                 <li>Lorem ipsum dolor sit amet.</li>
             </ol>
-
+<form action="">
+    <tbody>
+        <input type="text">
+        <input type="text">
+        <input type="number"></tbody>
+</form>
         </div>
         <script>
             $(document).ready(function () {
@@ -113,6 +118,10 @@
                 })
             });
 
+
+            $(".addBtn").click(function(){
+                $(this).parentsUntil('from').find('tbody').find('')
+            })
 
 
 
