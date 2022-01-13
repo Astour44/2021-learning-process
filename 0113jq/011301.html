@@ -74,9 +74,9 @@
 
             str = ""
             aarray.forEach(function myarray(value, index, array) {
-                console.log(value)//value 顯示1 3 5 7 9
-                console.log(index)//index 顯示0 1 2 3 4
-                console.log(array)//option 顯示完整陣列               
+                // console.log(value)//value 顯示1 3 5 7 9
+                // console.log(index)//index 顯示0 1 2 3 4
+                // console.log(array)//option 顯示完整陣列               
                 str += `<li>myArr[${index}]=>${value}</li>`
 
             })
@@ -86,8 +86,8 @@
                 }
                 return value * 40
             })
-            console.log('aarray', aarray)
-            console.log('mapNewArr', mapNewArr)
+            // console.log('aarray', aarray)//1 3 5 7 9
+            // console.log('mapNewArr', mapNewArr)//40,120,200,5,5
 
             // map = aarray.map(function (value) { return value * 40 })
             // map = aarray.map(value => value * 40)//箭頭函示
@@ -98,7 +98,7 @@
             //比5大的7跟9挑出來後用push()丟進陣列裡面cosnole.log出來
             newerr = []
             aarray.forEach(function myarray(value) {
-                if (value > 5) {
+                if (value >= 5) {
                     newerr.push(value)
                 }
                 console.log(newerr)
@@ -107,10 +107,38 @@
 
             //用filter篩選出value出來後回傳大於5的數字
             filteraarray = aarray.filter(function (value) {
-                return value > 5
+                return value <= 5
             })
-            console.log(filteraarray)
+            console.log('filteraarray', filteraarray)
+            //箭頭函示簡化
+            // filter = aarray.filter(value => value <= 5)
+            // console.log('filteraarray', filter)//
+
+
+
+            // [1,3,5,7,9] => 全部 判斷array 是不是都小於10
+            //這邊用every()去判斷陣列裡面的質是否都小於10如果是會回傳true不是會回傳false
+            everyaarray = aarray.every(value => (value < 10))
+            console.log(everyaarray)
+
+
+
+            someaarray = aarray.some(value => (value < 10))
+            console.log(someaarray)
+
+            //這邊用reduce去將陣列裡面的數字全部加在一起，後續再加上500
+            const reduceaarray=aarray.reduce((total, value) => {
+                return total + value
+            }, 500)
+            console.log(someaarray)
+
+
+
+
+
         });
+
+
 
     </script>
 
