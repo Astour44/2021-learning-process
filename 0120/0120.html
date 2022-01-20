@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .border {
+            width: 400px;
+            height: 400px;
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- <div class="row">
+            <div class="col-12">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, maxime?</p>
+            </div>
+            <button type="button" id="open">open</button>
+            <button type="button" id="clone">clone</button>
+        </div> -->
+        <div class="row">
+            <div class="col-12">
+                <p>This is a paragraph.</p>
+                <button class="btn1">Hide</button>
+                <button class="btn2">Show</button>
+                <button class="animatebtn">animate</button>
+                <button class="stopbtn">stop</button>
+                <button id="callbackbtn">callback</button>
+                <button id="nowdate">nowdate</button>
+
+            </div>
+            <div class='border'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi qui omnis amet
+                repellat quidem molestias, sequi, voluptatum recusandae ratione nostrum, harum numquam nobis nemo!
+                Libero quis iste quo illo nulla.</div>
+            <div class='callbackp'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi qui omnis amet
+                repellat quidem molestias, sequi, voluptatum recusandae ratione nostrum, harum numquam nobis nemo!
+                Libero quis iste quo illo nulla.</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- 先載入 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <!-- 先載入 END-->
+
+    <script>
+
+        $(document).ready(function () {
+
+            // $('p').mouseenter(function () 
+            // $('p').click(function () {
+            //     $('p').hide()
+            // })
+
+            // $('#open').click(function () {
+            //     $('p').show()
+            // })
+            // $('#clone').click(function () {
+            //     lastp = $('p').last()
+            //     clonep = lastp.clone()
+            //     lastp.after(clonep)
+            //     //等同
+            //     // $('p').last().after($('p').last().clone())
+            // })
+
+
+            //淡入淡出
+            $(".btn1").click(function () {
+                $("p").fadeOut()
+            });
+            $(".btn2").click(function () {
+                $("p").fadeIn();
+            });
+
+
+
+            //動畫
+            $('.animatebtn').click(function () {
+                $('.border').animate(
+                    {
+                        'width': '800px',
+                        'height': '800px',
+                        'font-size': '30px',
+                    }, 6000
+                );
+            })
+
+
+
+            //暫停
+            // $('.stopbtn').click(function () {
+            //     $('.border').stop();
+            // })
+            $('.stopbtn').click(() => {
+                $('.border').stop();
+            })
+
+
+
+            //減少完後跳出警告視窗
+            $('#callbackbtn').click(() => {
+                $('.callbackp').hide(1000, () => {
+                    alert('0525')
+                })
+            })
+
+
+
+
+
+            //抓出js時間
+            $("#nowdate").click(function () {
+                console.log( new Date())//抓出現在標準時間
+                console.log( new Date().getHours())//抓出現在小時
+                // 詳細取得的東西https://www.fooish.com/javascript/date/
+                
+            })
+           
+
+
+
+
+
+
+            //抓出js滑鼠座標
+            //左鍵點一下就會知道座標位置
+            // $("html").mousemove(function (any) {
+            //     console.log(any.pageX + ", " + any.pageY)
+            // })
+
+
+
+
+
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>
