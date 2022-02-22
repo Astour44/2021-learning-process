@@ -45,9 +45,9 @@
 
 
     <!-- 先載入 -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
@@ -64,12 +64,10 @@
     <script>
 
         $(document).ready(function () {
-
-            // console.log('Array.isArray(dataStore)', Array.isArray(dataStore));
-
             newDataStore = {};
             dataStore.forEach((value, key) => {
-                // console.log('value',value);
+                console.log('value', value);
+                console.log('key', key);
                 if (value.area == '北部') {
                     newDataStore[key] = { area: '北部12345' };
                     newDataStore[key] = { district: value.district };
@@ -83,7 +81,7 @@
 
             });
             console.log('newDataStore', newDataStore);
-            console.log('ataStore', dataStore);
+            console.log('dataStore', dataStore);
 
             for (const key in dataStore) {
                 if (dataStore[key]['area'] == '北部') {

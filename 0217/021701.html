@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+
+
+  <style>
+    .canvas {
+      /* background-color: aqua; */
+      width: 300px;
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 圖表一start -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="text-center">chart.js</h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-6"></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <canvas id="myChart2"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="text-center">chart3.js</h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-6">
+        <canvas id="myChart3"></canvas>
+      </div>
+    </div>
+  </div>
+  <!-- 圖表end -->
+  <!-- 先載入 -->
+  <!-- bs4 載入slim 缺少ajax與effects -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
+
+  <!-- datatable 要放在Bootstrap的下面-->
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+  <!-- 先載入 END-->
+
+  <!-- cdnj裡的chart.js第一行 -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+  <!-- google搜尋chart.js-> getstarted-> Getting Started -> 第二行的script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+
+  <script>
+    const ctx = document.getElementById('myChart');
+    const myChart = new Chart(ctx, {
+      type: 'bar',//更改這邊可以選擇用圖表還是折線圖或是圓餅圖
+      data: {
+        labels: ['2012-09', '2013-09', '2014-09', '2015-09', '2016-09', '2017-09', '2018-09', '2019-09', '2020-09', '2021-09'],
+        datasets: [{
+          label: 'EPS',
+          data: [43.9, 37.6, 38.6, 40.1, 39.1, 38.5, 38.3, 37.8, 38.2, 41.8, 43.0],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+  </script>
+  <script>
+    const ctx2 = document.getElementById('myChart2');
+    const myChart2 = new Chart(ctx2, {
+      type: 'line',//更改這邊可以選擇用圖表還是折線圖或是圓餅圖
+      data: {
+        labels: ['2012-03', '2013-03', '2014-03', '2015-03', '2016-03', '2017-03', '2018-03', '2019-03', '2020-03', '2021-03'],
+        datasets: [{
+          label: 'cash',//標題
+          data: [21.1, 21.5, 23.3, 25.0, 25.1, 25.5, 27.1, 27.7, 28.3, 27.1, 26.7],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    
+
+  </script>
+  <script>
+    const ctx3 = document.getElementById('myChart3');
+    const myChart3 = new Chart(ctx3, {
+      type: 'doughnut',//更改這邊可以選擇用圖表還是折線圖或是圓餅圖
+      data: {
+        labels: ['2012-03', '2013-03', '2014-03', '2015-03', '2016-03'],
+        datasets: [{
+          label: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6'],//標題
+          data: [21.1, 21.5, 23.3, 25.0, 25.1, 25.5, 27.1, 27.7, 28.3, 27.1, 26.7],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+  </script>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+  <script>
+    const myChart2 = new Chart2(
+      document.getElementById('myChart2'),
+      config
+    );
+  </script>
+  <script>
+    const myChart3 = new Chart3(
+      document.getElementById('myChart3'),
+      config
+    );
+  </script>
+
+</body>
+
+</html>
