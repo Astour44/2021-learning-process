@@ -62,7 +62,9 @@
     $(document).ready(function () {
       $.ajax({
         type: "get",
+        //這邊type可以改成method 意思一樣
         url: "https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=CWB-8157FF54-1DBD-4C1D-8E70-457CDD467301&downloadType=WEB&format=JSON",
+        //url這邊是直接接http的網路檔案，而不是下載檔案
         dataType: 'json',
         success: function (result) {
           data = result.cwbopendata.dataset.location;
