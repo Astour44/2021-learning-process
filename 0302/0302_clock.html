@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="digiImg">
+        <div id="ck1" class="img1"></div>
+        <div id="ck2" class="img2"></div>
+        <div class="imgd">:</div>
+        <div id="ck3" class="img3"></div>
+        <div id="ck4" class="img4"></div>
+        <div class="imgd">:</div>
+        <div id="ck5" class="img5"></div>
+        <div id="ck6" class="img6"></div>
+    </div>
+
+    <script>
+        //箭頭函式
+        const changeTime = () => {
+            //等於
+            // function changeTime() {
+
+
+
+
+            const nt = new Date();//抓目前的時間
+            //console.log(nt);//顯示目前時間
+            const nh = nt.getHours();//抓出目前的小時
+            const nm = nt.getMinutes();//抓出目前的分鐘
+            const ns = nt.getSeconds();//抓出目前的秒鐘
+
+
+
+            //Math.floor回傳小於等於所給數字的最大整數
+            //5.95回傳5 5.05回傳5 -5.05回傳-6
+            const nk1 = Math.floor(nh / 10);//取小時的十位數
+            const nk2 = nh % 10;//取小時的個位數
+
+            const nk3 = Math.floor(nm / 10);//取分鐘的十位數
+            const nk4 = nm % 10;//取分鐘的個位數
+
+            const nk5 = Math.floor(ns / 10);//取秒鐘的十位數
+            const nk6 = ns % 10;//取秒鐘的個位數
+
+            //document.getElementById('ck1')指定ck1這個id
+            //className=`img${nk1}`
+            //改變這個id的class
+            //img${}裡面是上面取得的數字
+            document.getElementById('ck1').className = `img${nk1}`;
+            document.getElementById('ck2').className = `img${nk2}`;
+            document.getElementById('ck3').className = `img${nk3}`;
+            document.getElementById('ck4').className = `img${nk4}`;
+            document.getElementById('ck5').className = `img${nk5}`;
+            document.getElementById('ck6').className = `img${nk6}`;
+
+            
+            document.querySelectorAll('.imgd')[0].style.opacity = 1;
+            document.querySelectorAll('.imgd')[1].style.opacity = 1;
+            setTimeout(() => {
+                document.querySelectorAll('.imgd')[0].style.opacity = 0;
+                document.querySelectorAll('.imgd')[1].style.opacity = 0;
+            },500);
+        }
+
+        setInterval(changeTime, 1000);
+        //setInterval是設定某個時間後不斷重複執行對應的程式碼
+        //這邊就是每1秒(1000毫秒)會重複執行changeTime這個自訂的函式
+    </script>
+</body>
+
+</html>

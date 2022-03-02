@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    background: #555;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.digiImg {
+    display: flex;
+
+}
+
+.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9,.img0 {
+    width: 100px;
+    height: 100px;
+    background: url(./num.png);
+}
+
+.imgd {
+    width: 50px;
+    height: 100px;
+    background: url(./num.png);
+    background-position: right;
+}
+
+
+.img1 {
+    background-position: -100px;
+}
+
+.img2 {
+    background-position: -200px;
+}
+
+.img3 {
+    background-position: -300px;
+}
+
+.img4 {
+    background-position: -400px;
+}
+
+.img5 {
+    background-position: -500px;
+}
+
+.img6 {
+    background-position: -600px;
+}
+
+.img7 {
+    background-position: -700px;
+}
+
+.img8 {
+    background-position: -800px;
+}
+
+.img9 {
+    background-position: -900px;
+}
+
+.img0 {
+    background-position: 0px;
+}
