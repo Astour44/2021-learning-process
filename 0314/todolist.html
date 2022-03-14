@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO工作項目</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+</head>
+<body>
+<div id="app" class="mx-5">
+    <h1 class="text-center text-primary">TODO LIST</h1>
+    <label class="form-group" for="textfield">請輸入待辦事項內容:</label>
+    <input class="form-group form-control col-3" type="text" v-model="context" id="textfield" @keyup.enter="addContext">
+    <hr>
+    <h3>待辦事項列表</h3>
+    <div>目前共有工作項目<span class="text-info" style="font-size:2rem">{{ count }}</span>項</div>
+    <ul v-if="list.length>0" class="list-group">
+        <li class="list-group-item d-flex row col-6" v-for="item,idx in list" :key="idx">
+            <span class="col-8">{{ item }}</span>
+            <div class="col-4 d-flex justify-content-around">
+                <button class="btn btn-primary" @click="editItem(idx)">edit</button>
+                <button class="btn btn-danger" @click="delItem(idx)">X</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
+<script>
+
+let set={
+data(){
+    let list=new Array();
+    let context='';
+    let count=0;
+    return { list,context,count}
+},
+mounted(){
+    if(localStorage.length>0){
+        for(let i=0 ;i<localStorage.length;i++){
+            this.list.push(localStorage.getItem(i));
+        }
+        this.count=localStorage.length
+    }
+    
+},
+watch: {
+    list:{
+        handler(newList, oldList){
+            this.updateStorage()
+        },
+    deep: true,
+    }    
+  },
+methods:{
+    addContext(){
+        
+        if(this.context.length>0){
+            this.list.push(this.context)
+            this.context=''
+            this.count=this.list.length
+        }
+
+    },
+    delItem(idx){
+        this.list.splice(idx,1)
+        this.count=this.list.length
+    },
+    editItem(idx){
+        let text=prompt('請輸入你要修改的項目描述',this.list[idx])
+        if(text!==null && text.length>0){
+            this.list[idx]=text 
+        }
+    },
+    updateStorage(){
+        localStorage.clear()
+        for(let i=0; i<this.list.length;i++){
+            localStorage.setItem(i,this.list[i])
+        }
+
+    }
+}
+}
+
+Vue.createApp(set).mount("#app")
+</script>

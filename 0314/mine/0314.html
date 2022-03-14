@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+
+        <h1>{{ message }}</h1>
+        <h3>{{hi}}</h3>
+        <div v-for="name in names">{{name}}</div>
+
+        <input type="text" v-model="myname" value="">
+        <h1>{{myname}}</h1>
+    </div>
+    <script>
+        // Vue.createApp({
+        //     data() {
+
+        //         let message = '嗨龍嗨龍';
+        //         let hi = 'hi!' + message;
+        //         let names = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',]
+
+        //         return {
+        //             message, hi, names
+        //         }
+        //     }
+        // }).mount('#app')
+        //-----------同一個意思--------------
+        const setting = {
+            data() {
+
+                let message = '嗨龍嗨龍';
+                let hi = 'hi!' + message;
+                let myname = "請輸入你的名稱?"
+                return {
+                    message, hi,myname
+                }
+            }
+
+
+        }
+        Vue.createApp(setting).mount('#app')
+    </script>
+</body>
+
+</html>
